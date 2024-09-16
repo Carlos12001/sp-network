@@ -1,0 +1,28 @@
+# Python
+
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.pyd
+*.py
+*.pyc
+*.pyo
+*.pyd
+
+# C
+
+*.o
+*.a
+*.so
+*.so.*
+*.so
+a
+
+## Linux
+
+*.swp
+*.swo
+*.swm
+*.swx
+
