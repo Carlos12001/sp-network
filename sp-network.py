@@ -3,7 +3,7 @@ sbox = [14, 4, 13, 1, 2, 11, 7, 8, 9, 6, 10, 12, 5, 3, 15, 0]
 pbox = [2, 0, 6, 4, 7, 5, 1, 3]
 
 # Recibir un string para la clave (debe ser exactamente 4 caracteres)
-key_string = "abcd"  # Aquí puedes cambiar por cualquier string de 4 caracteres
+key_string = "1234"  # Aquí puedes cambiar por cualquier string de 4 caracteres
 
 # Convertir el string en una clave de 32 bits
 key = 0
@@ -11,7 +11,7 @@ for i, char in enumerate(reversed(key_string)):
     key |= (ord(char) & 0xFF) << (8 * i)
 
 # String de entrada
-input_string = "hello world"
+input_string = "hello world!!"
 
 # Asegurarse de que la entrada sea un múltiplo de 4 caracteres (32 bits)
 while len(input_string) % 4 != 0:
@@ -52,3 +52,6 @@ for i in range(0, len(input_string), 4):
 print("Original:", input_string)
 print("Encrypted:", encrypted_string)
 
+# Guardar el resultado cifrado en un archivo binario
+with open("out.bin", "wb") as file:
+    file.write(encrypted_string.encode('latin1'))
