@@ -19,7 +19,10 @@ for i, char in enumerate(reversed(key_string)):
     key |= (ord(char) & 0xFF) << (8 * i)
 
 # String cifrado
-encrypted_string = "�����5�S��e�Ԅ"  # Aquí coloca el string cifrado que generaste
+encrypted_string = ""
+
+with open("out.bin", "rb") as file:
+    encrypted_string = file.read().decode('latin1')
 
 # String descifrado resultante
 decrypted_string = ""

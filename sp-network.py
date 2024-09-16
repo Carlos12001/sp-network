@@ -51,7 +51,6 @@ for i in range(0, len(input_string), 4):
 
 print("Original:", input_string)
 print("Encrypted:", encrypted_string)
-
 # Guardar el resultado cifrado en un archivo binario
 with open("out.bin", "wb") as file:
     file.write(encrypted_string.encode('latin1'))
